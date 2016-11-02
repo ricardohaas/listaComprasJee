@@ -9,17 +9,21 @@
 </head>
 <body>
 <h:head>
-	<title>Cadastrar Produto</title>
+	<title>Cadastrar Categoria</title>
 </h:head>
 <h:body>
 	<h:form>
-		<h1>Novo Produto</h1> 
-		Nome: <h:inputText value="#{productBean.product.name}" /><br />
+		<h1>Nova Categoria</h1> 
+		Nome: <h:inputText value="#{productCategoryBean.productCategory.name}" /><br />
 		<div class="ui-field-contain">
 			<label for="textarea-1">Descrição:</label>
-			<h:inputTextarea value="#{productBean.product.description}" />
+			<h:inputTextarea value="#{productCategoryBean.productCategory.description}" />
 		</div>
-		<h:commandButton value="createProduct" action="#{productBean.save}" />
+		<div class="ui-field-contain">
+			<label for="textarea-1">Categoria Pai:</label>
+			<h:inputTextarea value="#{productCategoryBean.productCategory.parent}" />
+		</div>
+		<h:commandButton value="createProduct" action="#{productCategoryBean.save}" />
 	</h:form>
 </h:body>
 </body>
